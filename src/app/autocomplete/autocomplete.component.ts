@@ -10,7 +10,7 @@ import type { TUser } from '../../types';
 })
 export class AutocompleteComponent {
   @Input() users: TUser[] = [];
-  @Input() selectedUserIndex: number | null = null;
+  // @Input() selectedUserIndex: number | null = null;
   @Output() userSelected = new EventEmitter<TUser>();
 
   selectUser(user: TUser) {

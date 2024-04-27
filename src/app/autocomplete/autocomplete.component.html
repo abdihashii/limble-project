@@ -2,14 +2,10 @@
   class="absolute top-11 border rounded-lg bg-white left-0 max-h-fit w-60 overflow-y-scroll"
 >
   @if (users.length) { @for (user of users; track user; let idx = $index) {
-  <li
-    class="cursor-pointer hover:bg-gray-200 p-4"
-    (click)="selectUser(user)"
-    [class.selected]="idx === selectedUserIndex"
-  >
-    {{ idx }}: {{ user.name }}
+  <li class="cursor-pointer hover:bg-blue-200 p-4" (click)="selectUser(user)">
+    {{ user.name }}
   </li>
   } @empty {
-  <li>No users found!</li>
+  <li class="p-4 text-gray-500">No users found!</li>
   } }
 </ul>

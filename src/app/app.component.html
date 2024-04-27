@@ -40,7 +40,6 @@
       @if (showAutocomplete) {
       <app-autocomplete
         [users]="filteredUsers"
-        [selectedUserIndex]="selectedUserIndex"
         (userSelected)="onUserSelected($event)"
       ></app-autocomplete>
       }
